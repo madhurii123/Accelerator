@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercise 3 - Display & Positioning</title>
+  <style>
+    /* Reset + font */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    /* Header bar */
+    header {
+      background: #3498db;   /* blue background */
+      color: white;          /* text color white */
+      padding: 15px;
+      position: relative;    /* so absolute child (login) positions inside */
+    }
+
+    /* Login button */
+    .login-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: white;     /* white background */
+      color: #333;           /* dark text so it’s visible */
+      padding: 5px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* Container for 2 cards */
+    .container {
+      display: flex;
+      gap: 20px;             /* space between the cards */
+      padding: 20px;
+    }
+
+    /* Card boxes */
+    .card {
+      flex: 1;               /* equal width for both */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background: white;
+    }
+    .card h3 { margin-bottom: 12px; }
+
+    /* Vertical menu links */
+    .vertical a {
+      display: block;        /* makes them stack */
+      text-decoration: none;
+      color: black;
+      margin: 5px 0;
+    }
+
+    /* Horizontal menu links */
+    .horizontal a {
+      display: inline-block; /* keeps them side by side */
+      margin-right: 8px;
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #f9f9f9;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>Exercise 3: Display & Positioning</h2>
+    <div class="login-btn">Login</div>
+  </header>
+
+  <!-- Main area -->
+  <div class="container">
+
+    <!-- Left card: vertical menu -->
+    <div class="card">
+      <h3>Vertical Menu (Block Links)</h3>
+      <div class="vertical">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <!-- Right card: horizontal menu -->
+    <div class="card">
+      <h3>Horizontal Menu (Inline-Block Links)</h3>
+      <div class="horizontal">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
